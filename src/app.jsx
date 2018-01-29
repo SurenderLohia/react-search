@@ -1,17 +1,28 @@
 import React from 'react';
 import Navigation from './components/Navigation';
+import FilterProductTable from './components/FilterProductTable';
+
 import 'normalize.css';
 import 'styles/index.scss';
+
+const PRODUCTS = [
+  {category: 'Sporting Goods', price: '$49.99', stocked: true, name: 'Football'},
+  {category: 'Sporting Goods', price: '$9.99', stocked: true, name: 'Baseball'},
+  {category: 'Sporting Goods', price: '$29.99', stocked: false, name: 'Basketball'},
+  {category: 'Electronics', price: '$99.99', stocked: true, name: 'iPod Touch'},
+  {category: 'Electronics', price: '$399.99', stocked: false, name: 'iPhone 5'},
+  {category: 'Electronics', price: '$199.99', stocked: true, name: 'Nexus 7'}
+];
 
 const App = () => (
   <div className='App'>
     <Navigation/>
     <div>
-      <h1>It Works!</h1>
-      <p>This React project just works including <span className="redBg">module</span> local styles.</p>
-      <p>Enjoy!</p>
+      <FilterProductTable products={PRODUCTS} />
     </div>
   </div>
 );
+
+
 
 export default App;
