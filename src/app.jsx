@@ -1,5 +1,4 @@
 import React from 'react';
-import Navigation from './components/Navigation';
 import FilterProductTable from './components/FilterProductTable';
 
 import 'normalize.css';
@@ -16,7 +15,6 @@ const PRODUCTS = [
 
 const App = () => (
   <div className='App'>
-    <Navigation/>
     <div>
       <FilterProductTable products={PRODUCTS} />
     </div>
